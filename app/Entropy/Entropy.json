@@ -7,17 +7,22 @@
     "conMain": 4,
     "conNav": 5,
     "conNavMob": 7,
+    "imgLogo_NavMob": 11,
     "Label2": 10,
     "MainScreen": 3
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/31/2022 06:44:14",
+  "HeaderLastSavedDateTimeUTC": "07/31/2022 07:01:37",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
-  "LocalResourceFileNames": {},
-  "LocalResourceRootPaths": {},
+  "LocalResourceFileNames": {
+    "logo": "e49eb0b6-4b7e-44aa-9b8b-efca3d94dc8f.jpg"
+  },
+  "LocalResourceRootPaths": {
+    "logo": "https://docserverpwaprodeas.blob.core.windows.net/a7db5ca1-8405-498a-9c45-f8402a0a5434-1/resource/fe07d598-aaa4-4b6b-a809-f9de71747067.jpg?sv=2017-04-17&sr=b&sig=pkCrtlNlDC5LnKBcUXS4RJCr3X1j9Z1MLPIOxC%2BRIE0%3D&spr=https&se=2022-08-01T07%3A04%3A12Z&sp=r"
+  },
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {},
@@ -26,7 +31,8 @@
   "OrderTemplate": {},
   "OrderXMLTemplate": {
     "groupContainer": 0,
-    "label": 1
+    "image": 1,
+    "label": 2
   },
   "PublishOrderIndices": {
     "App": 0,
@@ -35,10 +41,14 @@
     "conMain": 0,
     "conNav": 1,
     "conNavMob": 2,
+    "imgLogo_NavMob": 0,
     "Label2": 4,
     "MainScreen": 0
   },
-  "ResourcesJsonIndices": {},
+  "ResourcesJsonIndices": {
+    "Image-logo": 1,
+    "Image-SampleImage": 0
+  },
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {

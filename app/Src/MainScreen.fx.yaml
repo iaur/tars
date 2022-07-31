@@ -12,12 +12,22 @@ MainScreen As screen:
 
         conContent As groupContainer.manualLayoutContainer:
             Fill: =RGBA(153, 207, 236, 1)
-            Height: =If(MainScreen.Size > ScreenSize.Medium,Parent.Height,Parent.Height *.75)
+            Height: |-
+                =If(
+                    MainScreen.Size > ScreenSize.Medium Or varNavMobExp =true,
+                    Parent.Height,
+                    Parent.Height * .75
+                )
             PaddingRight: =0.00
             PaddingTop: =0.00
             Width: =If(MainScreen.Size > ScreenSize.Medium,Parent.Width * .9,Parent.Width)
             X: =If(MainScreen.Size > ScreenSize.Medium,Parent.Width * .1,0)
-            Y: =If(MainScreen.Size > Medium,0,Parent.Height * .1)
+            Y: |-
+                =If(
+                    MainScreen.Size > Medium Or varNavMobExp,
+                    0,
+                    Parent.Height * .1
+                )
             ZIndex: =1
 
             Label2 As label:
@@ -38,13 +48,30 @@ MainScreen As screen:
 
         conNavMob As groupContainer.manualLayoutContainer:
             Fill: =RGBA(250, 155, 112, 1)
-            Height: =Parent.Height *.1
+            Height: |-
+                =If(
+                    varNavMobExp = true,
+                    Parent.Height,
+                    Parent.Height *.1
+                )
             PaddingRight: =0.00
             PaddingTop: =0.00
             Visible: =If(MainScreen.Size > Medium,false,true)
-            Width: =Parent.Width
+            Width: |-
+                =If(
+                    varNavMobExp = true,
+                    Parent.Width / 2,
+                    Parent.Width
+                )
             X: =0.00
             ZIndex: =3
+
+            imgLogo_NavMob As image:
+                Height: =76.80000000000001
+                Image: =logo
+                OnSelect: =Set(varNavMobExp,!varNavMobExp)
+                X: =40
+                ZIndex: =1
 
         conActionMob As groupContainer.manualLayoutContainer:
             Fill: =RGBA(251, 188, 159, 1)

@@ -9,7 +9,7 @@ MainScreen As screen:
             Fill: =RGBA(153, 207, 236, 1)
             Height: =If(conMain.Width > 700,Parent.Height,Parent.Height * .75)
             Width: =If(conMain.Width > 700,Parent.Width *.9,Parent.Width)
-            X: =136
+            X: =If(conMain.Width > 700,136,Parent.Height * .1)
             Y: =If(conMain.Width > 700,0,Parent.Height * .1)
             ZIndex: =1
 

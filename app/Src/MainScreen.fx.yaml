@@ -1,6 +1,8 @@
 MainScreen As screen:
+    Fill: =RGBA(0, 0, 0, 0)
 
     conMain As groupContainer.manualLayoutContainer:
+        BorderThickness: =3
         Height: =Parent.Height
         PaddingRight: =0.00
         PaddingTop: =0.00
@@ -10,12 +12,12 @@ MainScreen As screen:
 
         conContent As groupContainer.manualLayoutContainer:
             Fill: =RGBA(153, 207, 236, 1)
-            Height: =768
+            Height: =If(Parent.Width > ScreenSize.Medium,Parent.Height,Parent.Height *.75)
             PaddingRight: =0.00
             PaddingTop: =0.00
-            Width: =Parent.Width *.9
-            X: =180
-            Y: =If(conMain.Width > 700,0,Parent.Height * .1)
+            Width: =If(Parent.Width > ScreenSize.Medium,Parent.Width * .9,Parent.Width)
+            X: =If(Parent.Width > ScreenSize.Medium,Parent.Width * .1,0)
+            Y: =If(conMain.Width > Medium,0,Parent.Height * .1)
             ZIndex: =1
 
         conNav As groupContainer.manualLayoutContainer:
@@ -23,8 +25,8 @@ MainScreen As screen:
             Height: =Parent.Height
             PaddingRight: =0.00
             PaddingTop: =0.00
-            Visible: =If(conMain.Width > 700,true,false)
-            Width: =Parent.Width * .10
+            Visible: =If(conMain.Width > Medium,true,false)
+            Width: =Parent.Width * .1
             X: =0.00
             ZIndex: =2
 
@@ -33,8 +35,8 @@ MainScreen As screen:
             Height: =Parent.Height *.1
             PaddingRight: =0.00
             PaddingTop: =0.00
-            Visible: =If(conMain.Width > 700,false,true)
-            Width: =1549.64
+            Visible: =If(conMain.Width > Medium,false,true)
+            Width: =Parent.Width
             X: =0.00
             ZIndex: =3
 
@@ -43,8 +45,8 @@ MainScreen As screen:
             Height: =conMain.Height - conNavMob.Height - conContent.Height
             PaddingRight: =0.00
             PaddingTop: =0.00
-            Visible: =If(conMain.Width > 700,false,true)
-            Width: =1549.64
+            Visible: =If(conMain.Width > Medium,false,true)
+            Width: =Parent.Width
             X: =0.00
             Y: =652
             ZIndex: =4

@@ -7,11 +7,12 @@
     "conMain": 4,
     "conNav": 5,
     "conNavMob": 7,
+    "Label2": 10,
     "MainScreen": 3
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/31/2022 06:13:35",
+  "HeaderLastSavedDateTimeUTC": "07/31/2022 06:31:38",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -24,7 +25,8 @@
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
   "OrderXMLTemplate": {
-    "groupContainer": 0
+    "groupContainer": 0,
+    "label": 1
   },
   "PublishOrderIndices": {
     "App": 0,
@@ -33,6 +35,7 @@
     "conMain": 0,
     "conNav": 1,
     "conNavMob": 2,
+    "Label2": 0,
     "MainScreen": 0
   },
   "ResourcesJsonIndices": {},

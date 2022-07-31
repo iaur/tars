@@ -15,13 +15,13 @@ MainScreen As screen:
             Height: =If(MainScreen.Size > ScreenSize.Medium,Parent.Height,Parent.Height *.75)
             PaddingRight: =0.00
             PaddingTop: =0.00
-            Width: =If(Parent.Width > ScreenSize.Medium,Parent.Width * .9,Parent.Width)
+            Width: =If(MainScreen.Size > ScreenSize.Medium,Parent.Width * .9,Parent.Width)
             X: =If(MainScreen.Size > ScreenSize.Medium,Parent.Width * .1,0)
-            Y: =If(conMain.Width > Medium,0,Parent.Height * .1)
+            Y: =If(MainScreen.Size > Medium,0,Parent.Height * .1)
             ZIndex: =1
 
             Label2 As label:
-                Text: =MainScreen.Size
+                Text: =Parent.Width
                 X: =40
                 Y: =80
                 ZIndex: =1

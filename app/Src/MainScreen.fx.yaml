@@ -31,7 +31,7 @@ MainScreen As screen:
             Height: =Parent.Height
             PaddingRight: =0.00
             PaddingTop: =0.00
-            Visible: =If(conMain.Width > Medium,true,false)
+            Visible: =If(MainScreen.Size > Medium,true,false)
             Width: =Parent.Width * .1
             X: =0.00
             ZIndex: =2

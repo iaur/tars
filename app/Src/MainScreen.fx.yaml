@@ -4,27 +4,27 @@ MainScreen As screen:
         Height: =Parent.Height
         PaddingRight: =0.00
         PaddingTop: =0.00
-        Width: =1400.00
+        Width: =Parent.Width
         X: =0.00
         ZIndex: =1
 
         conContent As groupContainer.manualLayoutContainer:
             Fill: =RGBA(153, 207, 236, 1)
-            Height: =If(conMain.Width > 700,Parent.Height,Parent.Height * .75)
+            Height: =768
             PaddingRight: =0.00
             PaddingTop: =0.00
-            Width: =1260.00
-            X: =If(conMain.Width > 700,139.39,0)
+            Width: =Parent.Width *.9
+            X: =180
             Y: =If(conMain.Width > 700,0,Parent.Height * .1)
             ZIndex: =1
 
         conNav As groupContainer.manualLayoutContainer:
             Fill: =RGBA(102, 182, 227, 1)
-            Height: =768
+            Height: =Parent.Height
             PaddingRight: =0.00
             PaddingTop: =0.00
             Visible: =If(conMain.Width > 700,true,false)
-            Width: =140.00
+            Width: =Parent.Width * .10
             X: =0.00
             ZIndex: =2
 
@@ -34,7 +34,7 @@ MainScreen As screen:
             PaddingRight: =0.00
             PaddingTop: =0.00
             Visible: =If(conMain.Width > 700,false,true)
-            Width: =1398.98
+            Width: =1549.64
             X: =0.00
             ZIndex: =3
 
@@ -44,7 +44,7 @@ MainScreen As screen:
             PaddingRight: =0.00
             PaddingTop: =0.00
             Visible: =If(conMain.Width > 700,false,true)
-            Width: =1398.98
+            Width: =1549.64
             X: =0.00
             Y: =652
             ZIndex: =4

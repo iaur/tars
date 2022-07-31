@@ -16,7 +16,7 @@ MainScreen As screen:
             PaddingRight: =0.00
             PaddingTop: =0.00
             Width: =If(Parent.Width > ScreenSize.Medium,Parent.Width * .9,Parent.Width)
-            X: =If(Parent.Width > ScreenSize.Medium,Parent.Width * .1,0)
+            X: =If(MainScreen.Size > ScreenSize.Medium,Parent.Width * .1,0)
             Y: =If(conMain.Width > Medium,0,Parent.Height * .1)
             ZIndex: =1
 
@@ -48,7 +48,7 @@ MainScreen As screen:
 
         conActionMob As groupContainer.manualLayoutContainer:
             Fill: =RGBA(251, 188, 159, 1)
-            Height: =conMain.Height - conNavMob.Height - conContent.Height
+            Height: =Parent.Height *.15
             PaddingRight: =0.00
             PaddingTop: =0.00
             Visible: =If(MainScreen.Size  > Medium,false,true)

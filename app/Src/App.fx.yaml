@@ -2,6 +2,7 @@ App As appinfo:
     BackEnabled: =false
     OnStart: |
         =Set(varNavMobExp,false);
+        Set(varVisDash,true);
         
         // light
         //10 764BC4

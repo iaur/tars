@@ -1,7 +1,8 @@
 {
   "ComponentIndexes": {
     "comNavMenu": 1,
-    "comNavMenu_Main": 1
+    "comNavMenu_Desktop": 1,
+    "comNavMenu_Mobile": 1
   },
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
@@ -9,7 +10,8 @@
     "btnNavBtn": 62,
     "btnNavMenu": 68,
     "comNavMenu": 25,
-    "comNavMenu_Main": 71,
+    "comNavMenu_Desktop": 71,
+    "comNavMenu_Mobile": 73,
     "conActionMob": 10,
     "conDash": 8,
     "conKanban": 11,
@@ -21,8 +23,8 @@
     "galNavMenu": 63,
     "hconNavBtn_btn": 61,
     "hconNavBtn_details": 58,
+    "icoHam": 75,
     "imgLogo": 59,
-    "imgLogo_NavMob": 7,
     "imgNavMenu": 66,
     "Label2": 9,
     "Label2_1": 12,
@@ -36,7 +38,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/07/2022 04:27:38",
+  "HeaderLastSavedDateTimeUTC": "08/07/2022 06:06:56",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -65,6 +67,7 @@
     "button": 3,
     "gallery": 4,
     "groupContainer": 0,
+    "icon": 6,
     "image": 1,
     "label": 2,
     "rectangle": 5
@@ -74,7 +77,8 @@
     "btnNavBtn": 17,
     "btnNavMenu": 23,
     "comNavMenu": 0,
-    "comNavMenu_Main": 9,
+    "comNavMenu_Desktop": 9,
+    "comNavMenu_Mobile": 0,
     "conActionMob": 10,
     "conDash": 7,
     "conKanban": 3,
@@ -86,8 +90,8 @@
     "galNavMenu": 18,
     "hconNavBtn_btn": 16,
     "hconNavBtn_details": 13,
+    "icoHam": 0,
     "imgLogo": 14,
-    "imgLogo_NavMob": 2,
     "imgNavMenu": 22,
     "Label2": 8,
     "Label2_1": 4,
@@ -109,7 +113,7 @@
   "VolatileProperties": {
     "AnalysisLoadTime": 0.1027912,
     "ControlCount": {
-      "84454605648e470d828efb2d60e1001f": 4,
+      "84454605648e470d828efb2d60e1001f": 6,
       "button": 5,
       "gallery": 1,
       "galleryTemplate": 1,

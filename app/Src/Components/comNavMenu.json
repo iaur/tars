@@ -1387,7 +1387,7 @@
                       },
                       {
                         "Category": "Behavior",
-                        "InvariantScript": "Set(varExpandMenu,!varExpandMenu)",
+                        "InvariantScript": "If(\n    MainScreen.Size > Medium,\n    Set(\n        varExpandMenu,\n        !varExpandMenu\n    ),\n    Set(\n        varVisNavMenu_Mobile,\n        false\n    )\n)",
                         "Property": "OnSelect",
                         "RuleProviderType": "Unknown"
                       }
@@ -2642,7 +2642,14 @@
                 "ControlPropertyState": [
                   "BorderColor",
                   "BorderStyle",
-                  "Fill",
+                  {
+                    "AFDDataSourceName": "",
+                    "AutoRuleBindingEnabled": false,
+                    "AutoRuleBindingString": "",
+                    "InvariantPropertyName": "Fill",
+                    "IsLockable": false,
+                    "NameMapSourceSchema": "?"
+                  },
                   "X",
                   "Y",
                   {
@@ -2725,7 +2732,7 @@
                   },
                   {
                     "Category": "Design",
-                    "InvariantScript": "RGBA(0, 0, 0, 0)",
+                    "InvariantScript": "If(ThisItem.IsSelected,varColor30,RGBA(0, 0, 0, 0))",
                     "Property": "Fill",
                     "RuleProviderType": "Unknown"
                   },
@@ -2852,7 +2859,14 @@
                 "AllowAccessToGlobals": true,
                 "Children": [],
                 "ControlPropertyState": [
-                  "OnSelect",
+                  {
+                    "AFDDataSourceName": "",
+                    "AutoRuleBindingEnabled": false,
+                    "AutoRuleBindingString": "Select(Parent)",
+                    "InvariantPropertyName": "OnSelect",
+                    "IsLockable": false,
+                    "NameMapSourceSchema": "?"
+                  },
                   {
                     "AFDDataSourceName": "",
                     "AutoRuleBindingEnabled": false,
@@ -3214,7 +3228,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Select(Parent)",
+                    "InvariantScript": "If(\n    ThisItem.MenuLabel = \"Dashboard\",\n    Set(\n        varVisDash,\n        true\n    );\n    Set(\n        varVisKanban,\n        false\n    );\n    Set(\n        varVisPlutus,\n        false\n    )\n    ,\n        ThisItem.MenuLabel = \"Plutus\",\n    Set(\n        varVisDash,\n        false\n    );\n    Set(\n        varVisKanban,\n        false\n    );\n    Set(\n        varVisPlutus,\n        true\n    ),\n        ThisItem.MenuLabel = \"Kanban\",\n    Set(\n        varVisDash,\n        false\n    );\n    Set(\n        varVisKanban,\n        true\n    );\n    Set(\n        varVisPlutus,\n        false\n    )\n    ,\n    \"\"\n)",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -3458,7 +3472,8 @@
                 "IsLockable": false,
                 "NameMapSourceSchema": "?"
               },
-              "ZIndex"
+              "ZIndex",
+              "Visible"
             ],
             "ControlUniqueId": "63",
             "DynamicProperties": [
@@ -3659,6 +3674,12 @@
                 "Category": "Design",
                 "InvariantScript": "Self.BorderColor",
                 "Property": "PressedBorderColor",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "true",
+                "Property": "Visible",
                 "RuleProviderType": "Unknown"
               }
             ],
@@ -3899,9 +3920,10 @@
         "IsLockable": false,
         "NameMapSourceSchema": "?"
       },
-      "ShowLabel"
+      "ShowLabel",
+      "TileFill"
     ],
-    "LastModifiedTimestamp": "637954432377584918",
+    "LastModifiedTimestamp": "637954490266779244",
     "Name": "comNavMenu",
     "Rules": [
       {
@@ -3918,7 +3940,7 @@
       },
       {
         "Category": "Data",
-        "InvariantScript": "Table(\n    {\n        MenuLabel: \"Dasboard\",\n        MenuIcon: \"data:image/svg+xml,\" & \n EncodeUrl(\n    \"<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='-10 0 2068 2048'>\n  <g transform='matrix(1 0 0 -1 0 2048),rotate(0,1034,1024)'>\n   <path fill='#764BC4'\nd='M512 1152h384v-1152h-384v1152zM640 128h128v896h-128v-896zM1024 896h384v-896h-384v896zM1152 128h128v640h-128v-640zM0 640h384v-640h-384v640zM128 128h128v384h-128v-384zM1536 1408h384v-1408h-384v1408zM1664 128h128v1152h-128v-1152zM1389 1427q19 -41 19 -83q0 -40 -15 -75t-41 -61t-61 -41t-75 -15t-75 15t-61 41t-41 61t-15 75v12t1 12l-188 94q-26 -26 -61 -40t-72 -14q-42 0 -83 19l-256 -256q19 -41 19 -83q0 -40 -15 -75t-41 -61t-61 -41t-75 -15t-75 15t-61 41t-41 61t-15 75t15 75t41 61t61 41t75 15q42 0 83 -19l256 256q-19 41 -19 83q0 40 15 75t41 61t61 41t75 15t75 -15t61 -41t41 -61t15 -75v-12t-1 -12l188 -94q26 26 61 40t72 14q42 0 83 -19l256 256q-19 41 -19 83q0 40 15 75t41 61t61 41t75 15t75 -15t61 -41t41 -61t15 -75t-15 -75t-41 -61t-61 -41t-75 -15q-42 0 -83 19zM192 1024q26 0 45 19t19 45t-19 45t-45 19t-45 -19t-19 -45t19 -45t45 -19zM1728 1920q-26 0 -45 -19t-19 -45t19 -45t45 -19t45 19t19 45t-19 45t-45 19zM704 1536q26 0 45 19t19 45t-19 45t-45 19t-45 -19t-19 -45t19 -45t45 -19zM1216 1280q26 0 45 19t19 45t-19 45t-45 19t-45 -19t-19 -45t19 -45t45 -19z' />\n  </g>\n\n</svg>\"\n),\n        MenuAction: true,\n        MenuID:1\n    },\n        {\n        MenuLabel: \"Plutus\",\n        MenuIcon: \"data:image/svg+xml,\" & \n EncodeUrl(\n    \"<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='-10 0 2068 2048'>\n  <g transform='matrix(1 0 0 -1 0 2048),rotate(0,1034,1024)'>\n   <path fill='#764BC4'\nd='M576 1280q26 0 45 -19t19 -45t-19 -45t-45 -19t-45 19t-19 45t19 45t45 19zM1678 1604q84 -39 152.5 -99.5t117 -136.5t74.5 -163.5t26 -180.5q0 -79 -18 -154t-51 -144t-80.5 -130t-106.5 -113v-163q0 -40 -15 -75t-41 -61t-61 -41t-75 -15h-128q-30 0 -58.5 9t-52.5 26t-42 40.5t-28 52.5h-278q-10 -29 -28 -52.5t-42 -40.5t-52.5 -26t-58.5 -9h-128q-40 0 -75 15t-61 41t-41 61t-15 75v80q-68 18 -128.5 53t-108.5 84t-82.5 109t-50.5 129q-32 8 -58 26t-44.5 42.5t-29 54.5t-10.5 62v128q0 34 11.5 65.5t32.5 57t49.5 43t62.5 23.5q74 104 162 194t194 162v358l399 -199h123q14 56 45 103t74 81t96 53t111 19q69 0 130.5 -26.5t107 -72t72 -107t26.5 -130.5q0 -56 -18 -108zM1360 1920q-43 0 -81 -16.5t-66 -44.5t-44.5 -66t-16.5 -81q0 -35 10 -65l342 -85q30 29 47 68.5t17 81.5q0 43 -16.5 81t-44.5 66t-66 44.5t-81 16.5zM1664 542q57 46 104 99t81 113t52.5 127t18.5 143t-22 147.5t-62 132.5t-96.5 109.5t-125.5 79.5q-17 -21 -37.5 -38.5t-43.5 -31.5l-462 115q-15 31 -27 61t-17 65h-146l-241 120v-218q-70 -47 -126 -91.5t-104 -93t-92.5 -104t-91.5 -125.5q-17 0 -34.5 -1.5t-31.5 -7.5t-23 -19t-9 -36v-128q0 -26 19 -45t45 -19h64q0 -80 30 -149.5t82.5 -122t122 -82.5t149.5 -30v-192q0 -26 19 -45t45 -19h128q26 0 45 19t19 45v64h512q0 -18 -0.5 -40.5t4.5 -42t18.5 -32.5t41.5 -13h128q26 0 45 19t19 45v222z' />\n  </g>\n\n</svg>\"\n),\n        MenuAction: true,\n        MenuID:2\n    },\n    {\n        MenuLabel: \"Kanban\",\n        MenuIcon: \"data:image/svg+xml,\" & \n EncodeUrl(\n    \"<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='-10 0 2068 2048'>\n  <g transform='matrix(1 0 0 -1 0 2048),rotate(0,1034,1024)'>\n   <path fill='#764BC4'\nd='M1920 1920v-1792h-1920v1792h1920zM1792 1792h-768v-1024h768v1024zM128 1792v-384h768v384h-768zM128 256h768v1024h-768v-1024zM1792 256v384h-768v-384h768z' />\n  </g>\n\n</svg>\"\n),\n        MenuAction: true,\n        MenuID:3\n    }\n)",
+        "InvariantScript": "Table(\n    {\n        MenuLabel: \"Dashboard\",\n        MenuIcon: \"data:image/svg+xml,\" & \n EncodeUrl(\n    \"<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='-10 0 2068 2048'>\n  <g transform='matrix(1 0 0 -1 0 2048),rotate(0,1034,1024)'>\n   <path fill='#764BC4'\nd='M512 1152h384v-1152h-384v1152zM640 128h128v896h-128v-896zM1024 896h384v-896h-384v896zM1152 128h128v640h-128v-640zM0 640h384v-640h-384v640zM128 128h128v384h-128v-384zM1536 1408h384v-1408h-384v1408zM1664 128h128v1152h-128v-1152zM1389 1427q19 -41 19 -83q0 -40 -15 -75t-41 -61t-61 -41t-75 -15t-75 15t-61 41t-41 61t-15 75v12t1 12l-188 94q-26 -26 -61 -40t-72 -14q-42 0 -83 19l-256 -256q19 -41 19 -83q0 -40 -15 -75t-41 -61t-61 -41t-75 -15t-75 15t-61 41t-41 61t-15 75t15 75t41 61t61 41t75 15q42 0 83 -19l256 256q-19 41 -19 83q0 40 15 75t41 61t61 41t75 15t75 -15t61 -41t41 -61t15 -75v-12t-1 -12l188 -94q26 26 61 40t72 14q42 0 83 -19l256 256q-19 41 -19 83q0 40 15 75t41 61t61 41t75 15t75 -15t61 -41t41 -61t15 -75t-15 -75t-41 -61t-61 -41t-75 -15q-42 0 -83 19zM192 1024q26 0 45 19t19 45t-19 45t-45 19t-45 -19t-19 -45t19 -45t45 -19zM1728 1920q-26 0 -45 -19t-19 -45t19 -45t45 -19t45 19t19 45t-19 45t-45 19zM704 1536q26 0 45 19t19 45t-19 45t-45 19t-45 -19t-19 -45t19 -45t45 -19zM1216 1280q26 0 45 19t19 45t-19 45t-45 19t-45 -19t-19 -45t19 -45t45 -19z' />\n  </g>\n\n</svg>\"\n),\n        MenuAction: true,\n        MenuID:1\n    },\n        {\n        MenuLabel: \"Plutus\",\n        MenuIcon: \"data:image/svg+xml,\" & \n EncodeUrl(\n    \"<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='-10 0 2068 2048'>\n  <g transform='matrix(1 0 0 -1 0 2048),rotate(0,1034,1024)'>\n   <path fill='#764BC4'\nd='M576 1280q26 0 45 -19t19 -45t-19 -45t-45 -19t-45 19t-19 45t19 45t45 19zM1678 1604q84 -39 152.5 -99.5t117 -136.5t74.5 -163.5t26 -180.5q0 -79 -18 -154t-51 -144t-80.5 -130t-106.5 -113v-163q0 -40 -15 -75t-41 -61t-61 -41t-75 -15h-128q-30 0 -58.5 9t-52.5 26t-42 40.5t-28 52.5h-278q-10 -29 -28 -52.5t-42 -40.5t-52.5 -26t-58.5 -9h-128q-40 0 -75 15t-61 41t-41 61t-15 75v80q-68 18 -128.5 53t-108.5 84t-82.5 109t-50.5 129q-32 8 -58 26t-44.5 42.5t-29 54.5t-10.5 62v128q0 34 11.5 65.5t32.5 57t49.5 43t62.5 23.5q74 104 162 194t194 162v358l399 -199h123q14 56 45 103t74 81t96 53t111 19q69 0 130.5 -26.5t107 -72t72 -107t26.5 -130.5q0 -56 -18 -108zM1360 1920q-43 0 -81 -16.5t-66 -44.5t-44.5 -66t-16.5 -81q0 -35 10 -65l342 -85q30 29 47 68.5t17 81.5q0 43 -16.5 81t-44.5 66t-66 44.5t-81 16.5zM1664 542q57 46 104 99t81 113t52.5 127t18.5 143t-22 147.5t-62 132.5t-96.5 109.5t-125.5 79.5q-17 -21 -37.5 -38.5t-43.5 -31.5l-462 115q-15 31 -27 61t-17 65h-146l-241 120v-218q-70 -47 -126 -91.5t-104 -93t-92.5 -104t-91.5 -125.5q-17 0 -34.5 -1.5t-31.5 -7.5t-23 -19t-9 -36v-128q0 -26 19 -45t45 -19h64q0 -80 30 -149.5t82.5 -122t122 -82.5t149.5 -30v-192q0 -26 19 -45t45 -19h128q26 0 45 19t19 45v64h512q0 -18 -0.5 -40.5t4.5 -42t18.5 -32.5t41.5 -13h128q26 0 45 19t19 45v222z' />\n  </g>\n\n</svg>\"\n),\n        MenuAction: true,\n        MenuID:2\n    },\n    {\n        MenuLabel: \"Kanban\",\n        MenuIcon: \"data:image/svg+xml,\" & \n EncodeUrl(\n    \"<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='-10 0 2068 2048'>\n  <g transform='matrix(1 0 0 -1 0 2048),rotate(0,1034,1024)'>\n   <path fill='#764BC4'\nd='M1920 1920v-1792h-1920v1792h1920zM1792 1792h-768v-1024h768v1024zM128 1792v-384h768v384h-768zM128 256h768v1024h-768v-1024zM1792 256v384h-768v-384h768z' />\n  </g>\n\n</svg>\"\n),\n        MenuAction: true,\n        MenuID:3\n    }\n)",
         "Property": "MenuItems",
         "RuleProviderType": "System"
       },
@@ -3926,6 +3948,12 @@
         "Category": "Data",
         "InvariantScript": "true",
         "Property": "ShowLabel",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "RGBA(0, 0, 0, 1)",
+        "Property": "TileFill",
         "RuleProviderType": "System"
       },
       {
@@ -4011,6 +4039,15 @@
       "PropertyDataTypeKey": "Boolean",
       "Tooltip": "A custom property",
       "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "TileFill",
+      "Hidden": false,
+      "Name": "TileFill",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -4021,7 +4058,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637954432377584918",
+  "LastModifiedTimestamp": "637954490266779244",
   "Name": "84454605648e470d828efb2d60e1001f",
   "OverridableProperties": {},
   "Version": "637954312351717625"

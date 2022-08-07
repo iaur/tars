@@ -185,7 +185,7 @@ MainScreen As screen:
                 comNavMenu_Mobile.comHeight
             Visible: |-
                 =If(
-                    MainScreen.Size < ScreenSize.Medium And varVisNavMenu_Mobile = true,
+                    MainScreen.Size <= ScreenSize.Medium And varVisNavMenu_Mobile = true,
                     true,
                     false
                 )

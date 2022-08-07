@@ -130,7 +130,7 @@
                     "Name": "imgLogo",
                     "Parent": "hconNavBtn_details",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 14,
+                    "PublishOrderIndex": 15,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -472,7 +472,7 @@
                     "Name": "lblNavBtn",
                     "Parent": "hconNavBtn_details",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 15,
+                    "PublishOrderIndex": 16,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -800,7 +800,7 @@
                 "Name": "hconNavBtn_details",
                 "Parent": "conNavBtn",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 13,
+                "PublishOrderIndex": 14,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -1149,7 +1149,7 @@
                     "Name": "btnNavBtn",
                     "Parent": "hconNavBtn_btn",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 17,
+                    "PublishOrderIndex": 18,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -1470,7 +1470,7 @@
                 "Name": "hconNavBtn_btn",
                 "Parent": "conNavBtn",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 16,
+                "PublishOrderIndex": 17,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -1707,7 +1707,7 @@
             "Name": "conNavBtn",
             "Parent": "vconNavMenu",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 12,
+            "PublishOrderIndex": 13,
             "Rules": [
               {
                 "Category": "Design",
@@ -1850,7 +1850,7 @@
                 "Name": "galleryTemplate2",
                 "Parent": "galNavMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 19,
+                "PublishOrderIndex": 20,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -2071,7 +2071,7 @@
                     "Name": "lblNavMenu",
                     "Parent": "vconMenuItem_details",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 21,
+                    "PublishOrderIndex": 22,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -2439,7 +2439,7 @@
                     "Name": "imgNavMenu",
                     "Parent": "vconMenuItem_details",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 22,
+                    "PublishOrderIndex": 23,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -2722,7 +2722,7 @@
                 "Name": "vconMenuItem_details",
                 "Parent": "galNavMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 20,
+                "PublishOrderIndex": 21,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -3008,7 +3008,7 @@
                 "Name": "btnNavMenu",
                 "Parent": "galNavMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 23,
+                "PublishOrderIndex": 24,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -3296,7 +3296,7 @@
                 "Name": "shpNavMenu_separator",
                 "Parent": "galNavMenu",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 24,
+                "PublishOrderIndex": 25,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -3530,7 +3530,7 @@
             "Name": "galNavMenu",
             "Parent": "vconNavMenu",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 18,
+            "PublishOrderIndex": 19,
             "Rules": [
               {
                 "Category": "Data",
@@ -3747,7 +3747,7 @@
         "Name": "vconNavMenu",
         "Parent": "comNavMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 11,
+        "PublishOrderIndex": 12,
         "Rules": [
           {
             "Category": "Design",

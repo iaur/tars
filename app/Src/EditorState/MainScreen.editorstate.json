@@ -79,7 +79,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "comNavMenu_Main",
-      "ParentIndex": 0,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -392,7 +392,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conDash",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -562,7 +562,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conKanban",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -923,7 +923,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conNavMob",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1098,7 +1098,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "conPlutus",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

@@ -168,14 +168,14 @@ comNavMenu As CanvasComponent:
                     Height: =Self.Size * 1.8
                     OnSelect: =
                     PaddingBottom: =0
-                    PaddingLeft: =0
+                    PaddingLeft: =20
                     PaddingRight: =0
-                    PaddingTop: =0
+                    PaddingTop: =3
                     Size: =12
                     Text: =ThisItem.MenuLabel
                     VerticalAlign: =VerticalAlign.Top
                     Visible: =comNavMenu.ShowLabel
-                    Width: =Parent.Width -imgNavMenu.Width -80
+                    Width: =Parent.Width -imgNavMenu.Width -100
                     X: =56
                     Y: =
                     ZIndex: =2

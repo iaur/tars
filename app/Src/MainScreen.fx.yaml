@@ -138,7 +138,7 @@ MainScreen As screen:
 
         comNavMenu_Main As comNavMenu:
             comHeight: =Parent.Height
-            comWidth: =If(varExpandMenu = true, Parent.Width * .1,Parent.Width * .05)
+            comWidth: =If(varExpandMenu = true, Parent.Width * .15,Parent.Width * .05)
             Height: |-
                 =//640
                 comNavMenu_Main.comHeight

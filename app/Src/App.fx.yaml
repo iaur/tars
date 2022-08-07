@@ -1,4 +1,19 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: =Set(varNavMobExp,false)
+    OnStart: |
+        =Set(varNavMobExp,false);
+        
+        // light
+        //10 764BC4
+        // hover BBA5E1
+        // darkest 313131
+        
+        //dark pallete
+        Set(varColor10,ColorValue("#764BC4")); //violet
+        Set(varColor30,ColorValue("#414141")); //darker
+        Set(varColor60,ColorValue("#525252")); //dark
+        Set(varColorBtn,ColorValue("#BBA5E1")); //violetlight
+        
+        //onstart
+        Set(varExpandMenu,false)
 

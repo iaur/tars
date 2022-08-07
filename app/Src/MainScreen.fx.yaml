@@ -10,7 +10,7 @@ MainScreen As screen:
         X: =0.00
         ZIndex: =1
 
-        conContent As groupContainer.manualLayoutContainer:
+        conKanban As groupContainer.manualLayoutContainer:
             Fill: =RGBA(153, 207, 236, 1)
             Height: |-
                 =If(
@@ -21,7 +21,7 @@ MainScreen As screen:
             PaddingRight: =0.00
             PaddingTop: =0.00
             Width: =If(MainScreen.Size > ScreenSize.Medium,Parent.Width * .9,Parent.Width)
-            X: =If(MainScreen.Size > ScreenSize.Medium,Parent.Width * .1,0)
+            X: =122.89999999999986
             Y: |-
                 =If(
                     MainScreen.Size > Medium Or varNavMobExp,
@@ -30,21 +30,73 @@ MainScreen As screen:
                 )
             ZIndex: =1
 
-            Label2 As label:
-                Text: =Parent.Width
+            Label2_1 As label:
+                Text: ="Kanban"
                 X: =40
                 Y: =80
                 ZIndex: =1
 
-        conNav As groupContainer.manualLayoutContainer:
-            Fill: =RGBA(102, 182, 227, 1)
-            Height: =Parent.Height
+        conPlutus As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(153, 207, 236, 1)
+            Height: |-
+                =If(
+                    MainScreen.Size > ScreenSize.Medium Or varNavMobExp =true,
+                    Parent.Height,
+                    Parent.Height * .75
+                )
             PaddingRight: =0.00
             PaddingTop: =0.00
-            Visible: =If(MainScreen.Size > Medium,true,false)
-            Width: =Parent.Width * .1
-            X: =0.00
+            Width: =If(MainScreen.Size > ScreenSize.Medium,Parent.Width * .9,Parent.Width)
+            X: =122.89999999999986
+            Y: |-
+                =If(
+                    MainScreen.Size > Medium Or varNavMobExp,
+                    0,
+                    Parent.Height * .1
+                )
             ZIndex: =2
+
+            Label2_2 As label:
+                Text: ="Plutus"
+                X: =40
+                Y: =80
+                ZIndex: =1
+
+        conDash As groupContainer.manualLayoutContainer:
+            Fill: =varColor30
+            Height: |-
+                =If(
+                    MainScreen.Size > ScreenSize.Medium Or varNavMobExp =true,
+                    Parent.Height,
+                    Parent.Height * .75
+                )
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Width: |-
+                =If(
+                    MainScreen.Size > ScreenSize.Medium,
+                    Parent.Width - comNavMenu_Main.Width,
+                    Parent.Width
+                )
+            X: |-
+                =If(
+                    MainScreen.Size > ScreenSize.Medium,
+                    comNavMenu_Main.Width,
+                    0
+                )
+            Y: |-
+                =If(
+                    MainScreen.Size > Medium Or varNavMobExp,
+                    0,
+                    Parent.Height * .1
+                )
+            ZIndex: =3
+
+            Label2 As label:
+                Text: ="Dashboard"
+                X: =40
+                Y: =80
+                ZIndex: =1
 
         conNavMob As groupContainer.manualLayoutContainer:
             Fill: =RGBA(250, 155, 112, 1)
@@ -64,11 +116,11 @@ MainScreen As screen:
                     Parent.Width
                 )
             X: =0.00
-            ZIndex: =3
+            ZIndex: =5
 
             imgLogo_NavMob As image:
                 Height: =76.80000000000001
-                Image: =logo
+                Image: ='logo_dark_transparent-large'
                 OnSelect: =Set(varNavMobExp,!varNavMobExp)
                 X: =40
                 ZIndex: =1
@@ -81,6 +133,18 @@ MainScreen As screen:
             Visible: =If(MainScreen.Size  > Medium,false,true)
             Width: =Parent.Width
             X: =0.00
-            Y: =conNavMob.Height + conContent.Height
-            ZIndex: =4
+            Y: =conNavMob.Height + conDash.Height
+            ZIndex: =6
+
+        comNavMenu_Main As comNavMenu:
+            comHeight: =Parent.Height
+            comWidth: =If(varExpandMenu = true, Parent.Width * .1,Parent.Width * .05)
+            Height: |-
+                =//640
+                comNavMenu_Main.comHeight
+            Visible: =If(MainScreen.Size > Medium,true,false)
+            Width: |-
+                =//640
+                comNavMenu_Main.comWidth
+            ZIndex: =7
 

@@ -1,63 +1,125 @@
 {
-  "ComponentIndexes": {},
+  "ComponentIndexes": {
+    "comNavMenu": 1,
+    "comNavMenu_Main": 1
+  },
+  "ControlUniqueGuids": {},
   "ControlUniqueIds": {
     "App": 1,
-    "conActionMob": 8,
-    "conContent": 6,
+    "btnNavBtn": 62,
+    "btnNavMenu": 68,
+    "comNavMenu": 25,
+    "comNavMenu_Main": 71,
+    "conActionMob": 10,
+    "conDash": 8,
+    "conKanban": 11,
     "conMain": 4,
-    "conNav": 5,
-    "conNavMob": 7,
-    "imgLogo_NavMob": 11,
-    "Label2": 10,
-    "MainScreen": 3
+    "conNavBtn": 57,
+    "conNavMob": 6,
+    "conPlutus": 13,
+    "galleryTemplate2": 64,
+    "galNavMenu": 63,
+    "hconNavBtn_btn": 61,
+    "hconNavBtn_details": 58,
+    "imgLogo": 59,
+    "imgLogo_NavMob": 7,
+    "imgNavMenu": 66,
+    "Label2": 9,
+    "Label2_1": 12,
+    "Label2_2": 14,
+    "lblNavBtn": 60,
+    "lblNavMenu": 67,
+    "MainScreen": 3,
+    "shpNavMenu_separator": 69,
+    "vconMenuItem_details": 65,
+    "vconNavMenu": 56
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/31/2022 07:01:37",
+  "HeaderLastSavedDateTimeUTC": "08/07/2022 04:17:28",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {
-    "logo": "e49eb0b6-4b7e-44aa-9b8b-efca3d94dc8f.jpg"
+    "logo_dark_transparent-large": "8bcab175-41e9-4df4-a00c-dab63ea956c9.png",
+    "logo_lite_transparent-large": "70719c04-cd64-40e9-b3fe-8590bfeb5211.png"
   },
   "LocalResourceRootPaths": {
-    "logo": "https://docserverpwaprodeas.blob.core.windows.net/a7db5ca1-8405-498a-9c45-f8402a0a5434-1/resource/fe07d598-aaa4-4b6b-a809-f9de71747067.jpg?sv=2017-04-17&sr=b&sig=pkCrtlNlDC5LnKBcUXS4RJCr3X1j9Z1MLPIOxC%2BRIE0%3D&spr=https&se=2022-08-01T07%3A04%3A12Z&sp=r"
+    "logo_dark_transparent-large": "https://docserverpwaprodseas.blob.core.windows.net/fd9c2d92-3b33-4bbb-80a7-b4553ada84fb-1/resource/3a35a6d6-ce23-44ed-af7a-c33f0def7f8a.png?sv=2017-04-17&sr=b&sig=XoVIHOVUe0OuvVVwH2m1mEmYWIJ0VkrkGkjfyaSZl9k%3D&spr=https&se=2022-08-08T03%3A57%3A12Z&sp=r",
+    "logo_lite_transparent-large": "https://docserverpwaprodseas.blob.core.windows.net/fd9c2d92-3b33-4bbb-80a7-b4553ada84fb-1/resource/4cabd004-7b10-4c05-a288-0ad1992ce6b2.png?sv=2017-04-17&sr=b&sig=ZdTMu%2BuE9XNemEYOveTDGW0IPJzmc8CXZGrucxK0C3s%3D&spr=https&se=2022-08-08T03%3A04%3A50Z&sp=r"
   },
-  "OrderComponentMetadata": {},
-  "OrderComponentTemplate": {},
-  "OrderDataSource": {},
+  "OldLogoFileName": "rnzirwzd.jpg",
+  "OrderComponentMetadata": {
+    "84454605648e470d828efb2d60e1001f": 0
+  },
+  "OrderComponentTemplate": {
+    "84454605648e470d828efb2d60e1001f": 0
+  },
+  "OrderDataSource": {
+    "CustomGallerySample": 0
+  },
   "OrderGroupControls": {},
   "OrderPcfTemplate": {},
   "OrderTemplate": {},
   "OrderXMLTemplate": {
+    "button": 3,
+    "gallery": 4,
     "groupContainer": 0,
     "image": 1,
-    "label": 2
+    "label": 2,
+    "rectangle": 5
   },
   "PublishOrderIndices": {
     "App": 0,
+    "btnNavBtn": 0,
+    "btnNavMenu": 0,
+    "comNavMenu": 0,
+    "comNavMenu_Main": 0,
     "conActionMob": 5,
-    "conContent": 3,
+    "conDash": 3,
+    "conKanban": 3,
     "conMain": 0,
-    "conNav": 1,
+    "conNavBtn": 0,
     "conNavMob": 2,
+    "conPlutus": 3,
+    "galleryTemplate2": 0,
+    "galNavMenu": 0,
+    "hconNavBtn_btn": 0,
+    "hconNavBtn_details": 0,
+    "imgLogo": 0,
     "imgLogo_NavMob": 0,
+    "imgNavMenu": 0,
     "Label2": 4,
-    "MainScreen": 0
+    "Label2_1": 4,
+    "Label2_2": 4,
+    "lblNavBtn": 0,
+    "lblNavMenu": 0,
+    "MainScreen": 0,
+    "shpNavMenu_separator": 0,
+    "vconMenuItem_details": 0,
+    "vconNavMenu": 0
   },
   "ResourcesJsonIndices": {
-    "Image-logo": 1,
+    "Image-logo_dark_transparent-large": 2,
+    "Image-logo_lite_transparent-large": 1,
     "Image-SampleImage": 0
   },
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.0195582,
+    "AnalysisLoadTime": 0.1027912,
     "ControlCount": {
-      "groupContainer": 5,
+      "84454605648e470d828efb2d60e1001f": 4,
+      "button": 5,
+      "gallery": 1,
+      "galleryTemplate": 1,
+      "groupContainer": 18,
+      "image": 7,
+      "label": 9,
+      "rectangle": 1,
       "screen": 1
     },
-    "DeserializationLoadTime": 0.1035147,
+    "DeserializationLoadTime": 1.4181319,
     "ErrorCount": 0
   },
   "WasLocalDatabaseReferencesEmpty": true

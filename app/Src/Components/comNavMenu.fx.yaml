@@ -98,7 +98,14 @@ comNavMenu As CanvasComponent:
                     Font: =Font.Arial
                     FontWeight: =FontWeight.Bold
                     Text: ="TARS"
-                    Visible: =If(varExpandMenu=true,true,false)
+                    Visible: |
+                        =If(
+                            varExpandMenu = true,
+                            true,
+                            MainScreen.Size <= ScreenSize.Medium And varVisNavMenu_Mobile = true,
+                            true,
+                            false
+                        )
                     Width: =70
                     ZIndex: =2
 

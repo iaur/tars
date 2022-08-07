@@ -710,7 +710,7 @@
                       },
                       {
                         "Category": "Design",
-                        "InvariantScript": "If(varExpandMenu=true,true,false)",
+                        "InvariantScript": "If(\n    varExpandMenu = true,\n    true,\n    MainScreen.Size <= ScreenSize.Medium And varVisNavMenu_Mobile = true,\n    true,\n    false\n)\n",
                         "Property": "Visible",
                         "RuleProviderType": "Unknown"
                       }
@@ -3923,7 +3923,7 @@
       "ShowLabel",
       "TileFill"
     ],
-    "LastModifiedTimestamp": "637954490266779244",
+    "LastModifiedTimestamp": "637954496241773717",
     "Name": "comNavMenu",
     "Rules": [
       {
@@ -4058,7 +4058,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637954490266779244",
+  "LastModifiedTimestamp": "637954496241773717",
   "Name": "84454605648e470d828efb2d60e1001f",
   "OverridableProperties": {},
   "Version": "637954312351717625"

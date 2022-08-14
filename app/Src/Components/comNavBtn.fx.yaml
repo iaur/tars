@@ -1,0 +1,100 @@
+comNavBtn As CanvasComponent:
+    ButtonAction: ="Text"
+    ButtonImage: ="Text"
+    ButtonLabel: ="Text"
+    comHeight: =100
+    comWidth: =100
+    Fill: =RGBA(0, 0, 0, 0)
+    FontColor: =RGBA(0, 0, 0, 1)
+    Height: =comNavBtn.comHeight
+    HoverColor: =RGBA(0, 0, 0, 1)
+    LabelHide: =true
+    LabelRightSide: =true
+    Width: =comNavBtn.comWidth
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    vconBtnDetail_Side As groupContainer.horizontalAutoLayoutContainer:
+        Height: =comNavBtn.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =If(comNavBtn.LabelRightSide = true,LayoutDirection.Horizontal,LayoutDirection.Vertical)
+        LayoutJustifyContent: |-
+            =If(comNavBtn.LabelRightSide = true,LayoutJustifyContent.Start,LayoutJustifyContent.Center)
+            //If(vconBtnDetail_Side.LayoutDirection =Horizontal,Start,Center)
+        LayoutMode: =LayoutMode.Auto
+        Width: =comNavBtn.Width
+        ZIndex: =2
+
+        img_Side As image:
+            Height: =25
+            Image: |-
+                =Switch(
+                    comNavBtn.ButtonImage,
+                    "Admin",
+                    //Admin
+                "data:image/svg+xml," & 
+                 EncodeUrl(
+                    "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='-10 0 2068 2048'>
+                  <g transform='matrix(1 0 0 -1 0 2048),rotate(0,1034,1024)'>
+                   <path fill='#BBA5E1'
+                d='M1757 692q-14 -19 -28 -37t-30 -35l75 -194l-262 -153l-132 172q-27 -5 -54.5 -8t-54.5 -3q-28 0 -55 3v-386l-1152 266v1414l1152 266v-386q9 1 18.5 1.5t18.5 0.5l83 187l293 -77l-28 -212q20 -14 38.5 -28t35.5 -31l192 74l152 -262l-170 -131q5 -23 7 -46t3 -46l189 -84l-77 -293zM1216 741q14 -2 27 -3.5t27 -1.5q60 0 112.5 22.5t91.5 61.5t61.5 91.5t22.5 112.5t-22.5 112.5t-61.5 91.5t-91.5 61.5t-112.5 22.5q-14 0 -27 -1.5t-27 -3.5v-167q25 12 54 12q27 0 50 -10t40.5 -27.5t27.5 -40.5t10 -50t-10 -50t-27.5 -40.5t-40.5 -27.5t-50 -10q-29 0 -54 12v-167zM888 657q-55 189 -111 375.5t-109 375.5l-164 -10l-199 -705l146 -9l38 147h190l42 -164zM1625 636q30 27 55 58.5t45 66.5l198 -26l49 185l-177 79q0 5 0.5 11t0.5 11q0 35 -5 69t-13 70l158 121l-97 166l-180 -69q-57 57 -126 101l25 196l-186 49l-78 -175q-5 1 -11 1h-11q-14 0 -27 -3q-1 0 -1.5 -0.5t-3.5 -0.5h-24v-174q14 2 27 3t27 1q73 0 137 -27.5t112 -75.5t75.5 -112t27.5 -137t-27.5 -137t-75.5 -112t-112 -75.5t-137 -27.5q-14 0 -27 1t-27 3v-175q13 -2 25 -2h25q71 0 140 18l122 -160l167 97zM582 1218q0 -2 4 -18.5t10 -41t13.5 -54t14.5 -56t12.5 -47t7.5 -27.5h-124l58 229q2 10 4 15z' />
+                  </g>
+                
+                </svg>"
+                )
+                    ,
+                    "Info",
+                    //Info
+                "data:image/svg+xml," & 
+                 EncodeUrl(
+                    "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='-10 0 2068 2048'>
+                  <g transform='matrix(1 0 0 -1 0 2048),rotate(0,1034,1024)'>
+                   <path fill='#BBA5E1'
+                d='M960 2048q132 0 255 -34.5t229.5 -97t194 -150t150 -194t97 -229.5t34.5 -255t-34.5 -255t-97 -229.5t-150 -194t-194 -150t-229.5 -97t-255 -34.5t-255 34.5t-229.5 97t-194 150t-150 194t-97 229t-34.5 255.5q0 132 34.5 255t97 229.5t150 194t194 150t229 97t255.5 34.5zM1024 1280h-128v-640h128v640zM1024 1536h-128v-128h128v128z' />
+                  </g>
+                
+                </svg>"
+                )
+                    ,
+                    //Photo Error
+                    "data:image/svg+xml," & EncodeUrl(
+                        "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='-10 0 2068 2048'>
+                  <g transform='matrix(1 0 0 -1 0 2048),rotate(0,1034,1024)'>
+                   <path fill='#BBA5E1'
+                d='M1408 448v320h128v-320h-128zM1408 256v128h128v-128h-128zM0 1920h2048v-1434l-128 256v1050h-1792v-677l448 447l572 -572l-60 -120l-512 512l-448 -449v-421h781l-64 -128h-845v1536zM1600 1536q-26 0 -45 19t-19 45t19 45t45 19t45 -19t19 -45t-19 -45t-45 -19zM896 128l576 1152l576 -1152h-1152zM1077 240h790l-395 790z' />
+                  </g>
+                
+                </svg>"
+                    )
+                )
+            Width: =25
+            ZIndex: =1
+
+        lbl_Side As label:
+            Align: |
+                =If(comNavBtn.LabelRightSide = true,Align.Left,Align.Center)
+                //If(vconBtnDetail_Side.LayoutDirection = LayoutDirection.Horizontal,Align.Left,Align.Center)
+            Color: =comNavBtn.FontColor
+            Font: =Font.Arial
+            Height: =20
+            Size: =9
+            Text: =comNavBtn.ButtonLabel
+            Visible: =comNavBtn.LabelHide
+            ZIndex: =2
+
+    btn_NavBtn As button:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =comNavBtn.Height
+        HoverColor: =comNavBtn.HoverColor
+        HoverFill: =comNavBtn.HoverColor
+        PressedColor: =comNavBtn.HoverColor
+        PressedFill: =comNavBtn.HoverColor
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Text: =""
+        Width: =comNavBtn.Width
+        ZIndex: =3
+

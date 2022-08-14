@@ -94,7 +94,7 @@ comNavMenu As CanvasComponent:
                     ZIndex: =1
 
                 lblNavBtn As label:
-                    Color: =RGBA(255, 255, 255, 1)
+                    Color: =varColorLbl
                     Font: =Font.Arial
                     FontWeight: =FontWeight.Bold
                     Text: ="TARS"
@@ -182,7 +182,7 @@ comNavMenu As CanvasComponent:
                     ZIndex: =1
 
                 lblNavMenu As label:
-                    Color: =RGBA(255, 255, 255, 1)
+                    Color: =varColorLbl
                     Font: =Font.Arial
                     FontWeight: =FontWeight.Normal
                     Height: =Self.Size * 1.8

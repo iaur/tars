@@ -1,0 +1,131 @@
+comNavHeroBtn As CanvasComponent:
+    BorderColor: =RGBA(0, 0, 0, 1)
+    ButtonAction: ="Text"
+    ButtonImage: ="Text"
+    ButtonLabel: ="Text"
+    comHeight: =100
+    comWidth: =100
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =comNavHeroBtn.comHeight
+    HoverColor: =RGBA(0, 0, 0, 1)
+    Width: =comNavHeroBtn.comWidth +10
+    X: =0
+    Y: =0
+    ZIndex: =2
+
+    vconNavHeroBtn As groupContainer.verticalAutoLayoutContainer:
+        BorderColor: =comNavHeroBtn.BorderColor
+        BorderStyle: =BorderStyle.None
+        Height: =comNavHeroBtn.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        Width: =comNavHeroBtn.Width
+        ZIndex: =1
+
+        img_NavHeroBtn As image:
+            BorderStyle: =BorderStyle.None
+            Height: =vconNavHeroBtn.Height * 0.65
+            Image: |-
+                =Switch(
+                    comNavHeroBtn.ButtonImage,
+                    "Requester",
+                    //People
+                    Requester_Icon
+                    ,
+                    "Admin",
+                    //Retro
+                    Admin_Icon
+                    ,
+                    //Photo Error
+                "data:image/svg+xml," & 
+                 EncodeUrl(
+                    "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='-10 0 2068 2048'>
+                  <g transform='matrix(1 0 0 -1 0 2048),rotate(0,1034,1024)'>
+                   <path fill='#BBA5E1'
+                d='M1408 448v320h128v-320h-128zM1408 256v128h128v-128h-128zM0 1920h2048v-1434l-128 256v1050h-1792v-677l448 447l572 -572l-60 -120l-512 512l-448 -449v-421h781l-64 -128h-845v1536zM1600 1536q-26 0 -45 19t-19 45t19 45t45 19t45 -19t19 -45t-19 -45t-45 -19zM896 128l576 1152l576 -1152h-1152zM1077 240h790l-395 790z' />
+                  </g>
+                
+                </svg>"
+                )
+                )
+            LayoutMinWidth: =vconNavHeroBtn.Width
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Width: =Parent.Width -15
+            ZIndex: =1
+
+        lbl_NavHeroBtn As label:
+            Align: =Align.Center
+            BorderStyle: =BorderStyle.None
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            Height: =vconNavHeroBtn.Height * 0.15
+            LayoutMinWidth: =vconNavHeroBtn.Width
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =15
+            Text: =comNavHeroBtn.ButtonLabel
+            Width: =Parent.Width -15
+            ZIndex: =2
+
+    btn_NavHeroBtn As button:
+        BorderColor: =comNavHeroBtn.BorderColor
+        BorderThickness: =1
+        Color: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =comNavHeroBtn.Height -10
+        HoverFill: =comNavHeroBtn.HoverColor
+        OnSelect: |-
+            =Switch(
+                comNavHeroBtn.ButtonAction,
+                "Admin"
+                ,
+                //action
+                Set(
+                    varVisHome,
+                    false
+                );
+                Set(
+                    varVisAdmin,
+                    true
+                );
+                Set(
+                    varVisUser,
+                    false
+                );
+                ,
+                "User"
+                ,
+                //action
+                Set(
+                    varVisHome,
+                    false
+                );
+                Set(
+                    varVisAdmin,
+                    false
+                );
+                Set(
+                    varVisUser,
+                    true
+                );
+                ,
+                //else
+                Notify("Click btn has no assigned action",NotificationType.Error)
+            )
+        PaddingBottom: =10
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =10
+        Text: =""
+        Width: =comNavHeroBtn.Width -10
+        X: =5
+        Y: =5
+        ZIndex: =2
+

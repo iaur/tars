@@ -77,33 +77,36 @@ MainScreen As screen:
                 )
             ZIndex: =2
 
-            Label2_2 As label:
-                Text: ="Plutus"
-                Visible: =false
-                X: =40
-                Y: =80
-                ZIndex: =1
-
             hconMainPlutus As groupContainer.horizontalAutoLayoutContainer:
                 Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
                 LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =30
                 PaddingLeft: =50
                 PaddingRight: =50
+                PaddingTop: =30
                 Width: =Parent.Width
                 Y: =
                 ZIndex: =3
 
+                lblPlutusHeader As label:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    Color: =varColorLbl
+                    Font: =Font.Arial
+                    Text: ="Plutus"
+                    ZIndex: =1
+
                 hconAction As groupContainer.horizontalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     FillPortions: =0
-                    Height: =Parent.Height *.1
+                    Height: =Parent.Height *.07
                     LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
                     Width: =Parent.Width -100
-                    ZIndex: =1
+                    ZIndex: =2
 
                     comNavBtn_ActionNew As comNavBtn:
                         ButtonLabel: ="New Transaction"

@@ -14,7 +14,7 @@ App As appinfo:
         Set(varColor10,ColorValue("#BBA5E1")); //violet
         Set(varColor30,ColorValue("#414141")); //darker
         Set(varColor60,ColorValue("#525252")); //dark
-        Set(varColorLbl,RGBA(255, 255, 255, 1)); //violetlight
+        Set(varColorLbl,RGBA(255, 255, 255, 1)); //white
         Set(varColorBtn,RGBA(128, 128, 128, 0.2)); //lightest gray
         
         //onstart

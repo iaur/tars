@@ -134,36 +134,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.varColor10"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varColor10",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varColor10",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.varVisHome"
                 }
               ],

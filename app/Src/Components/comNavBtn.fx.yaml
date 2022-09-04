@@ -1,5 +1,6 @@
 comNavBtn As CanvasComponent:
     ButtonAction: ="Text"
+    ButtonBorderRadiusZero: =true
     ButtonImage: ="Text"
     ButtonLabel: ="Text"
     comHeight: =100
@@ -8,12 +9,23 @@ comNavBtn As CanvasComponent:
     FontColor: =RGBA(0, 0, 0, 1)
     Height: =comNavBtn.comHeight
     HoverColor: =RGBA(0, 0, 0, 1)
+    IcoHide: =true
     LabelHide: =true
     LabelRightSide: =true
+    SelectBarShow: =true
     Width: =comNavBtn.comWidth
     X: =0
     Y: =0
     ZIndex: =1
+
+    shp_NavBtn_Details As rectangle:
+        Fill: =varColor10
+        Height: =2
+        Visible: =comNavBtn.SelectBarShow
+        Width: =comNavBtn.Width
+        X: =(comNavBtn.Width/2) - (Self.Width/2)
+        Y: =comNavBtn.Height -Self.Height
+        ZIndex: =1
 
     vconBtnDetail_Side As groupContainer.horizontalAutoLayoutContainer:
         Height: =comNavBtn.Height
@@ -68,12 +80,17 @@ comNavBtn As CanvasComponent:
                 </svg>"
                     )
                 )
+            Visible: =comNavBtn.IcoHide
             Width: =25
-            ZIndex: =1
+            ZIndex: =2
 
         lbl_Side As label:
             Align: |
-                =If(comNavBtn.LabelRightSide = true,Align.Left,Align.Center)
+                =If(
+                    comNavBtn.LabelRightSide = true,
+                    Align.Left,
+                    Align.Center
+                )
                 //If(vconBtnDetail_Side.LayoutDirection = LayoutDirection.Horizontal,Align.Left,Align.Center)
             Color: =comNavBtn.FontColor
             Font: =Font.Arial
@@ -81,7 +98,7 @@ comNavBtn As CanvasComponent:
             Size: =9
             Text: =comNavBtn.ButtonLabel
             Visible: =comNavBtn.LabelHide
-            ZIndex: =2
+            ZIndex: =3
 
     btn_NavBtn As button:
         Fill: =RGBA(0, 0, 0, 0)
@@ -90,10 +107,10 @@ comNavBtn As CanvasComponent:
         HoverFill: =comNavBtn.HoverColor
         PressedColor: =comNavBtn.HoverColor
         PressedFill: =comNavBtn.HoverColor
-        RadiusBottomLeft: =20
-        RadiusBottomRight: =20
-        RadiusTopLeft: =20
-        RadiusTopRight: =20
+        RadiusBottomLeft: =If (comNavBtn.ButtonBorderRadiusZero = true,0,20)
+        RadiusBottomRight: =If (comNavBtn.ButtonBorderRadiusZero = true,0,20)
+        RadiusTopLeft: =If (comNavBtn.ButtonBorderRadiusZero = true,0,20)
+        RadiusTopRight: =If (comNavBtn.ButtonBorderRadiusZero = true,0,20)
         Text: =""
         Width: =comNavBtn.Width
         ZIndex: =3
